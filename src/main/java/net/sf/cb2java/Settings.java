@@ -67,6 +67,45 @@ public class Settings {
 		return DEFAULT;
 	}
 
+	public void setValue(String key, String value) {
+		switch(key) {
+			case "encoding" :
+				setEncoding(value);
+				break;
+			case "little-endian" :
+				setLittleEndian(Boolean.parseBoolean(value));
+				break;
+			case "float-conversion" :
+				setFloatConversion(value);
+				break;
+			case "default-sign-position" :
+				if(value.equals("leading")) {
+					setSignPosition(SignPosition.LEADING);
+				}
+				if(value.equals("trailing")) {
+					setSignPosition(SignPosition.TRAILING);
+				}
+				break;
+			case "column.start" :
+				setColumnStart(Integer.parseInt(value));
+				break;
+			case "column.end" :
+				setColumnEnd(Integer.parseInt(value));
+				break;
+			case "resilient" :
+				setResiliant(Boolean.parseBoolean(value));
+				break;
+			case "trim" :
+				setTrimStrings(Boolean.parseBoolean(value));
+				break;
+			case "EBCDIC-variant" :
+				setEBCDICVariant(value);
+				break;
+			default:
+				throw new RuntimeException("Unsupported argument: " + key);
+		}
+	}
+
 	public String getEncoding() {
 		return encoding;
 	}

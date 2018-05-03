@@ -4,17 +4,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>net.sf.cb2java</groupId>
-    <artifactId>cb2java</artifactId>
-    <version>5.4.0</version>
+    <artifactId>odase-cb2java</artifactId>
+    <version>5.5.0</version>
 
     <name>cb2java</name>
     <description>Library that allows dynamic access to Copybook structures at run-time from a Java application</description>
-    <url>https://github.com/johnhearn/cb2java</url>
+    <url>https://github.com/odaseontologies/cb2java</url>
     <inceptionYear>2006</inceptionYear>
 
     <scm>
-        <url>https://github.com/johnhearn/cb2java</url>
-        <connection>scm:git:git://github.com/johnhearn/cb2java.git</connection>
+        <url>https://github.com/odaseontologies/cb2java</url>
+        <connection>scm:git:git://github.com/odaseontologies/cb2java.git</connection>
     </scm>
 
     <licenses>
@@ -266,6 +266,13 @@
         <contributor>
             <name>Enrico Comiti</name>
             <url>https://github.com/enr</url>
+            <roles>
+                <role>contributor</role>
+            </roles>
+        </contributor>
+        <contributor>
+            <name>Maxime Van Assche</name>
+            <url>https://github.com/mvanassche</url>
             <roles>
                 <role>contributor</role>
             </roles>
