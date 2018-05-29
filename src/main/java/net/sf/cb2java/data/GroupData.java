@@ -53,7 +53,24 @@ public class GroupData extends Data {
     public List<Data> getChildren() {
         return childrenWrapper;
     }
-    
+
+    /**
+     * set a child in group data at the name of the data (in case of occurs it is the first one)
+     * @param data
+     */
+    public void setChild(Data data) {
+        setChild(data, 0);
+    }
+
+    /**
+     * set a child in group data at the name of the data and index (in case of occurs)
+     * @param data the data to set in the group
+     * @param indexForName the index in case of occurs
+     */
+    public void setChild(Data data, int indexForName) {
+        children.set(children.indexOf(getChild(data.getName())) + indexForName, data);
+    }
+
     /**
      * returns the first child with the specified name
      * irrespective of case

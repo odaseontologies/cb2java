@@ -67,6 +67,19 @@ public class Settings {
 		return DEFAULT;
 	}
 
+	public static String help() {
+		return "Settings: \n" +
+				"encoding <encoding>\n" +
+				"little-endian <true/false>\n" +
+				"float-conversion <?>\n" +
+				"default-sign-position <leading/trailing>\n" +
+				"column.start <int>\n" +
+				"column.end <int>\n" +
+				"resilient <true/false>\n" +
+				"trim <true/false>\n" +
+				"EBCDIC-variant <variant>";
+	}
+
 	public void setValue(String key, String value) {
 		switch(key) {
 			case "encoding" :
