@@ -89,7 +89,31 @@ public class GroupData extends Data {
         
         return null;
     }
-    
+
+    /**
+     * returns the indexForName'th child with the specified name
+     * irrespective of case
+     *
+     * @param name the name of the child to look for
+     * @param indexForName the index of the element with that name
+     * @return the first child with the given name
+     * @throws IllegalArgumentException if no child is found
+     */
+    public Data getChild(String name, int indexForName) {
+        for (Iterator<Data> i = childrenWrapper.iterator(); i.hasNext();) {
+            Data child = (Data) i.next();
+            if (child.getName().equalsIgnoreCase(name)) {
+                while(indexForName > 0 && i.hasNext()) {
+                    child = (Data) i.next();
+                    indexForName++;
+                }
+                return child;
+            }
+        }
+
+        return null;
+    }
+
     @Override
     public String toString() {
         return toString("");

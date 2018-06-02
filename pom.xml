@@ -5,7 +5,7 @@
 
     <groupId>net.sf.cb2java</groupId>
     <artifactId>odase-cb2java</artifactId>
-    <version>5.6.0</version>
+    <version>5.7.0</version>
 
     <name>cb2java</name>
     <description>Library that allows dynamic access to Copybook structures at run-time from a Java application</description>
