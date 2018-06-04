@@ -105,7 +105,7 @@ public class GroupData extends Data {
             if (child.getName().equalsIgnoreCase(name)) {
                 while(indexForName > 0 && i.hasNext()) {
                     child = (Data) i.next();
-                    indexForName++;
+                    indexForName--;
                 }
                 return child;
             }
